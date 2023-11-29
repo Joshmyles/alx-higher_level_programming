@@ -1,7 +1,2 @@
 #!/bin/bash
-
-if [-z "$PYFILE"]; then
-echo "PYFile Environment variable unavailable"
-exit 1
-fi
 python3 "$PYFILE"
