@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def no_c(my_string):
+    result = ""
     for i in my_string:
-        if(i == 'c' || i == 'C'):
-            my_string.remove(i)
-        else:
-            print("{}".format(i))
+        if i.lower() != "c":
+            result += i
+    return result
