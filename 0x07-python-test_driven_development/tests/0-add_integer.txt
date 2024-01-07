@@ -1,0 +1,27 @@
+# Test Case 1: Adding two integers
+Input: 5, 10
+Expected Output: 15
+
+# Test Case 2: Adding an integer and a float
+Input: 7, 3.5
+Expected Output: 10
+
+# Test Case 3: Adding two floats
+Input: 2.5, 1.5
+Expected Output: 4
+
+# Test Case 4: Adding two negative integers
+Input: -8, -3
+Expected Output: -11
+
+# Test Case 5: Adding an integer and a string
+Input: 15, "20"
+Expected Output: TypeError
+
+# Test Case 6: Adding a float and a string
+Input: 10.5, "5.5"
+Expected Output: TypeError
+
+# Test Case 7: Adding a string and a string
+Input: "hello", "world"
+Expected Output: TypeError
