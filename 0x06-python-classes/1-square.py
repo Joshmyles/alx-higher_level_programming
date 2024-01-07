@@ -1,5 +1,15 @@
 #!/usr/bin/python3
 
+"""
+Square class
+
+Attributes:
+    size (int): Private instance attribute
+
+Methods:
+    No methods
+"""
+
 
 class Square:
     """
