@@ -1,6 +1,6 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 
 // myVar.js
-let myVar = 333;
+const myVar = 333;
 
 module.exports = myVar;

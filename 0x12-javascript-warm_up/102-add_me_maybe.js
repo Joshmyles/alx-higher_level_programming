@@ -1,6 +1,6 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 
-function incrementAndCall(number, theFunction) {
+function incrementAndCall (number, theFunction) {
   const incrementedNumber = number + 1;
   theFunction(incrementedNumber);
 }

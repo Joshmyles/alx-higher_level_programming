@@ -1,6 +1,6 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 
-function add(a, b) {
+function add (a, b) {
   return a + b;
 }
 

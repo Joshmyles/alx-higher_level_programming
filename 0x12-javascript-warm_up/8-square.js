@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 
 const arg = process.argv[2];
 const size = parseInt(arg);
@@ -13,8 +13,8 @@ if (!isNaN(size)) {
       console.log(row);
     }
   } else {
-    console.log("Size must be a positive integer");
+    console.log('Size must be a positive integer');
   }
 } else {
-  console.log("Missing size");
+  console.log('Missing size');
 }
