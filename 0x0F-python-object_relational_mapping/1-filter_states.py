@@ -5,7 +5,10 @@ import MySQLdb
 import sys
 
 
-def list_states(uname, pword, db):
+""" list_states function that takes in 3 parameters: uname, pwd, db"""
+
+
+def list_states(uname, pwd, db):
     try:
         # Connect to MySQL server
         db = MySQLdb.connect(host="localhost", port=3306, user=uname, pwd=pwd, db=db)
@@ -31,9 +34,10 @@ def list_states(uname, pword, db):
         print("MySQL Error {}: {}".format(e.args[0], e.args[1]))
 
 
+""" Main function """
 if __name__ == "__main__":
     if len(sys.argv) != 4:
-        print("Usage: python script.py <username> <password> <database>")
+        print("Usage: python script.py <uname> <pwd> <db>")
         sys.exit(1)
 
     uname = sys.argv[1]
