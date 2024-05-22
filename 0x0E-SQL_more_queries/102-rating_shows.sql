@@ -3,9 +3,9 @@
 -- results must be sorted in desc order by rating
 -- you can use only one select statement
 
-SELECT tv_shows.title AS title, SUM(tv_show_ratings.rate) AS rating
+SELECT tv_shows.title, SUM(tv_show_ratings.rate) AS rating
 FROM tv_shows
-INNER JOIN tv_shows_ratings
+INNER JOIN tv_show_ratings
 ON tv_shows.id=tv_show_ratings.show_id
 GROUP BY tv_shows.id
 ORDER BY rating DESC;
