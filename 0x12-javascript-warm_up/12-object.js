@@ -1,11 +1,10 @@
 #!/usr/bin/node
 
-const args = process.argv.slice(2).map(Number);
+const myObject = {
+  type: 'Object',
+  value: 12,
+};
 
-for (let i = 0; i < args.length; i++) {
-  if (args[i] === 12) {
-    args[i] = 89;
-  }
-}
-
-console.log(args);
+console.log(myObject);
+myObject.value = 89;
+console.log(myObject);
