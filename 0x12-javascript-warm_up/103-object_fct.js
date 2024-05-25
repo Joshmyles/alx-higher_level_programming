@@ -1,9 +1,19 @@
 #!/usr/bin/node
 
-function incrementAndCall (number, theFunction) {
-  const incr = num => num + 1;
-  const incrementedNumber = incr(number);
-  theFunction(incrementedNumber);
-}
+const myObject = {
+  type: 'object',
+  value: 12,
+};
 
-module.exports = incrementAndCall;
+console.log(myObject);
+
+module.incr = function () {
+  myObject.value += 1;
+};
+
+myObject.incr();
+console.log(myObject);
+myObject.incr();
+console.log(myObject);
+myObject.incr();
+console.log(myObject);
