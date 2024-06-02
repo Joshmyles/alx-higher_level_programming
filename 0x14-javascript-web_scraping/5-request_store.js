@@ -15,7 +15,7 @@ request(url, function (err, response, body) {
   if (err) {
     console.log(err);
   } else if (response.statusCode === 200) {
-    fs.writeFileSync(filePath, 'UTF-8', body);
+    fs.writeFileSync(filePath, body, 'utf8');
   } else {
     console.log('Error Message: ' + response.statusCode);
   }
