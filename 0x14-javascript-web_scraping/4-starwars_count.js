@@ -6,7 +6,7 @@
 //  You must use module request
 
 const request = require('request');
-const url = 'https://swapi-api.alx-tools.com/api/films/';
+const url = process.argv[2];
 const character = 'Wedge Antilles';
 const id = 18;
 
@@ -15,10 +15,13 @@ request(url + id, function (err, response, body) {
     console.log(err);
   } else if (response.statusCode === 200) {
     let movieCount = 0;
-    const responseBody = data.body;
-    for (const charc in responseBody) {
-      if (charc === character) {
-        movieCount++;
+    const responseBody = JSON.parse(body).results;
+    for (const filmIndex in responseBody) {
+      const filmChars = responseBody[filmIndex].characters;
+      for (const charIndex in filmChars) {
+        if (filmChars[charIndex].includes('18')) {
+          movieCount++;
+        }
       }
     }
     console.log(movieCount);
