@@ -12,14 +12,13 @@ const movieId = process.argv[2];
 
 request.get(url + movieId, function (err, response, body) {
   if (err) {
-    console.log(err);
+    console.error(err);
   } else if (response.statusCode === 200) {
-    const movies = JSON.parse(body);
-    const characters = movies.characters;
-    for (const index in characters) {
-      request.get(index, function (err, response, body) {
+    const characters = JSON.parse(body).characters;
+    for (const characterUrl in characters) {
+      request.get(characterUrl, function (err, response, body) {
         if (err) {
-          console.log(err);
+          console.error(err);
         } else if (response.statusCode === 200) {
           const characterDetails = JSON.parse(body);
           console.log(characterDetails.name);
