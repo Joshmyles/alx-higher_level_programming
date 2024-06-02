@@ -1,11 +1,5 @@
 #!/usr/bin/node
 
-/**
- * script that reads and prints the content of a file
- * the first argument is the file path
- * if an error occured during reading, print error object
- */
-
 const fs = require('fs');
 const file = process.argv[2];
 
