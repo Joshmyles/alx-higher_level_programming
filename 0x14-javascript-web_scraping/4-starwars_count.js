@@ -7,7 +7,6 @@
 
 const request = require('request');
 const url = process.argv[2];
-const character = 'Wedge Antilles';
 const id = 18;
 
 request(url + id, function (err, response, body) {
