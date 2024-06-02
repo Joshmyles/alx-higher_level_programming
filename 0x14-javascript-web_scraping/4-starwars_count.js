@@ -12,7 +12,6 @@
 
 const request = require('request');
 const url = process.argv[2];
-const id = 18;
 
 request(url, function (err, response, body) {
   if (err) {
