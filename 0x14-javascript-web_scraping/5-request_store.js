@@ -14,8 +14,8 @@ const filePath = process.argv[3];
 request(url, function (err, response, body) {
   if (err) {
     console.log(err);
-  } else if (response === 200) {
-    fs.writeFileSync(filePath, body);
+  } else if (response.statusCode === 200) {
+    fs.writeFileSync(filePath, 'UTF-8', body);
   } else {
     console.log('Error Message: ' + response.statusCode);
   }
