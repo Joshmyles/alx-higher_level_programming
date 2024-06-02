@@ -13,19 +13,15 @@ const movieId = process.argv[2];
 request.get(url + movieId, function (err, response, body) {
   if (err) {
     console.error(err);
-  } else if (response.statusCode === 200) {
-    const characters = JSON.parse(body).characters;
-    for (const characterUrl in characters) {
-      request.get(characterUrl, function (err, response, body) {
-        if (err) {
-          console.error(err);
-        } else if (response.statusCode === 200) {
-          const characterDetails = JSON.parse(body);
-          console.log(characterDetails.name);
-        }
-      });
-    }
-  } else {
-    console.log('Error : ' + response.statusCode);
+  }
+  const characters = JSON.parse(body).characters;
+  for (const characterUrl in characters) {
+    request.get(characterUrl, function (err, response, body) {
+      if (err) {
+        console.error(err);
+      }
+      const characterDetails = JSON.parse(body);
+      console.log(characterDetails.name);
+    });
   }
 });
