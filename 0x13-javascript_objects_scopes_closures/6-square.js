@@ -1,11 +1,18 @@
 #!/usr/bin/node
 
-module.exports = class Square extends require('./5-square') {
-  constructor (size) {
-    super(size, size);
-  }
+/**
+ * a class Square that defines a square and inherits from Square of 5-square.js
+ *
+ * you must use the class notation for defining your class and extends
+ *
+ * create an instance method called charPrint(c) that prints the rectangle
+ * using the character c, if c is undefined, use x
+ */
 
-  charPrint (c) {
+const parentSquare = require('./5-square');
+
+module.exports = class Square extends parentSquare {
+  charPrint(c) {
     if (c === undefined) {
       this.print();
     } else {
