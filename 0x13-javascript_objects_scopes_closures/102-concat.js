@@ -36,7 +36,7 @@ fs.readFile(firstFile, 'utf8', function (err, data1) {
     }
 
     // concatenating the content
-    const data3 = data1 + '\n' + data2;
+    const data3 = data1 + '\n' + data2 + '\n';
 
     // writing the content to the final file
     fs.writeFile(finalFile, data3, 'utf8', function (err) {
