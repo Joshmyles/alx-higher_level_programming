@@ -42,7 +42,7 @@ fs.readFile(secondFile, 'utf8', function (err, data) {
 });
 
 // concatenating the content
-let file3Data = file1Data + file2Data;
+const file3Data = file1Data + file2Data;
 
 // writing the content to the final file
 fs.writeFile(finalFile, file3Data, 'utf8', function (err) {
