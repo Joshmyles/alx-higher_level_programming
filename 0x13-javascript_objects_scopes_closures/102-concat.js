@@ -28,7 +28,7 @@ fs.readFile(firstFile, 'utf8', function (err, data) {
     console.error(err);
   }
   file1Data = data;
-  process.exit(1);
+  // process.exit(1);
 });
 
 // reading contents of the second file
@@ -38,7 +38,7 @@ fs.readFile(secondFile, 'utf8', function (err, data) {
     console.error(err);
   }
   file2Data = data;
-  process.exit(1);
+  // process.exit(1);
 });
 
 // concatenating the content
@@ -52,5 +52,5 @@ fs.writeFile(finalFile, file3Data, 'utf8', function (err) {
   console.log(
     'Successfully concatenated contents of file1 and file2 into file3'
   );
-  process.exit(1);
+  // process.exit(1);
 });
