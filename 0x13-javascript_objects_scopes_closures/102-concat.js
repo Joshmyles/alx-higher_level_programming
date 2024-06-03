@@ -22,35 +22,31 @@ if (!firstFile || !secondFile || !finalFile) {
 }
 
 // reading contents of the first file
-let file1Data;
-fs.readFile(firstFile, 'utf8', function (err, data) {
+fs.readFile(firstFile, 'utf8', function (err, data1) {
   if (err) {
     console.error(err);
+    process.exit(1);
   }
-  file1Data = data;
-  // process.exit(1);
-});
 
-// reading contents of the second file
-let file2Data;
-fs.readFile(secondFile, 'utf8', function (err, data) {
-  if (err) {
-    console.error(err);
-  }
-  file2Data = data;
-  // process.exit(1);
-});
+  // reading contents of the second file
+  fs.readFile(secondFile, 'utf8', function (err, data2) {
+    if (err) {
+      console.error(err);
+      process.exit(1);
+    }
 
-// concatenating the content
-const file3Data = file1Data + file2Data;
+    // concatenating the content
+    const data3 = data1 + data2;
 
-// writing the content to the final file
-fs.writeFile(finalFile, file3Data, 'utf8', function (err) {
-  if (err) {
-    console.error(err);
-  }
-  console.log(
-    'Successfully concatenated contents of file1 and file2 into file3'
-  );
-  // process.exit(1);
+    // writing the content to the final file
+    fs.writeFile(finalFile, data3, 'utf8', function (err) {
+      if (err) {
+        console.error(err);
+        process.exit(1);
+      }
+      console.log(
+        'Successfully concatenated contents of file1 and file2 into file3'
+      );
+    });
+  });
 });
