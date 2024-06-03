@@ -44,9 +44,6 @@ fs.readFile(firstFile, 'utf8', function (err, data1) {
         console.error(err);
         process.exit(1);
       }
-      console.log(
-        'Successfully concatenated contents of file1 and file2 into file3'
-      );
     });
   });
 });
